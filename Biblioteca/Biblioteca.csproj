@@ -201,6 +201,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Alquiler.cs" />
     <Compile Include="Models\Autor.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Editorial.cs" />

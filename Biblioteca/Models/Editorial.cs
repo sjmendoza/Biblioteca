@@ -8,6 +8,7 @@ namespace Biblioteca.Models
 {
     public class Editorial
     {
+        [Display(Name = "Editorial Id")]
         public int EditorialId { get; set; }
 
         [Display(Name="Editorial")]

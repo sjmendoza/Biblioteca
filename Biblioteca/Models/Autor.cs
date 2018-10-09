@@ -8,7 +8,7 @@ namespace Biblioteca.Models
 {
     public class Autor
     {
-        
+        [Display(Name = "Auto Id")]
         public int AutorId { get; set; }
 
         [Display(Name = "Nombre")]

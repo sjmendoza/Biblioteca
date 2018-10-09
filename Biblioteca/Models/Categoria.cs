@@ -8,6 +8,7 @@ namespace Biblioteca.Models
 {
     public class Categoria
     {
+        [Display(Name = "Categoria Id")]
         public int CategoriaId { get; set; }
 
         [Display( Name="Categoría")]

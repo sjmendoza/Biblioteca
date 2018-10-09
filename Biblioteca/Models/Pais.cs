@@ -8,6 +8,7 @@ namespace Biblioteca.Models
 {
     public class Pais
     {
+        [Display(Name = "Pais Id")]
         public int PaisId { get; set; }
 
         [Display(Name="Pais")]

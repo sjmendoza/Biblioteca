@@ -18,6 +18,8 @@ namespace Biblioteca.Models
         public string nombre { get; set; }
 
         [Display(Name = "Telefono")]
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression(@"^\(?([0-9]{4})\)?[-. ]?([0-9]{4})$", ErrorMessage = "Formato de telefono no valido.")]
         public string telefono { get; set; }
 
         [Display(Name = "Direccion")]

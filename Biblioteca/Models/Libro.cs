@@ -14,6 +14,9 @@ namespace Biblioteca.Models
         [Display(Name = "Titulo")]
         public string titulo { get; set; }
 
+        [Display(Name = "Fecha Lanzamiento")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime fechaLanza{get;set;}
 
         [Display(Name = "Autor")]
@@ -34,7 +37,10 @@ namespace Biblioteca.Models
         [Display(Name = "Descripcion")]
         public string descripcion { get; set; }
 
+        [Display(Name = "Autor")]
         public virtual Autor Autor { get; set; }
+
+        [Display(Name = "Categoria")]
         public virtual Categoria Categoria { get; set; }
         public virtual Editorial Editorial { get; set; }
         public virtual Idioma Idioma { get; set; }

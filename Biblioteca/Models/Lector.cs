@@ -11,7 +11,7 @@ namespace Biblioteca.Models
         [Display(Name = "Lector Id")]
         public int LectorId { get; set; }
 
-        [Display(Name = "Apellid")]
+        [Display(Name = "Apellido")]
         public string apellido { get; set; }
 
         [Display(Name = "Nombre")]

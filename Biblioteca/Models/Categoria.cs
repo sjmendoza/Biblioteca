@@ -12,7 +12,7 @@ namespace Biblioteca.Models
         public int CategoriaId { get; set; }
 
         [Display( Name="Categoría")]
-        public string categoria { get; set; }
+        public string nombre { get; set; }
 
         public virtual ICollection<Libro> Libros { get; set; }
 

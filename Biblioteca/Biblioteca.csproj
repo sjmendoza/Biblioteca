@@ -195,8 +195,18 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlquileresController.cs" />
+    <Compile Include="Controllers\AutoresController.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\EditorialesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IdiomasController.cs" />
+    <Compile Include="Controllers\LectoresController.cs" />
+    <Compile Include="Controllers\LibrosController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PaisesController.cs" />
+    <Compile Include="DAL\BibliotecaContext.cs" />
+    <Compile Include="DAL\BibliotecaInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -273,9 +283,50 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Alquileres\Create.cshtml" />
+    <Content Include="Views\Alquileres\Delete.cshtml" />
+    <Content Include="Views\Alquileres\Details.cshtml" />
+    <Content Include="Views\Alquileres\Edit.cshtml" />
+    <Content Include="Views\Alquileres\Index.cshtml" />
+    <Content Include="Views\Autores\Create.cshtml" />
+    <Content Include="Views\Autores\Delete.cshtml" />
+    <Content Include="Views\Autores\Details.cshtml" />
+    <Content Include="Views\Autores\Edit.cshtml" />
+    <Content Include="Views\Autores\Index.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Editoriales\Create.cshtml" />
+    <Content Include="Views\Editoriales\Delete.cshtml" />
+    <Content Include="Views\Editoriales\Details.cshtml" />
+    <Content Include="Views\Editoriales\Edit.cshtml" />
+    <Content Include="Views\Editoriales\Index.cshtml" />
+    <Content Include="Views\Idiomas\Create.cshtml" />
+    <Content Include="Views\Idiomas\Delete.cshtml" />
+    <Content Include="Views\Idiomas\Details.cshtml" />
+    <Content Include="Views\Idiomas\Edit.cshtml" />
+    <Content Include="Views\Idiomas\Index.cshtml" />
+    <Content Include="Views\Lectores\Create.cshtml" />
+    <Content Include="Views\Lectores\Delete.cshtml" />
+    <Content Include="Views\Lectores\Details.cshtml" />
+    <Content Include="Views\Lectores\Edit.cshtml" />
+    <Content Include="Views\Lectores\Index.cshtml" />
+    <Content Include="Views\Libros\Create.cshtml" />
+    <Content Include="Views\Libros\Delete.cshtml" />
+    <Content Include="Views\Libros\Details.cshtml" />
+    <Content Include="Views\Libros\Edit.cshtml" />
+    <Content Include="Views\Libros\Index.cshtml" />
+    <Content Include="Views\Paises\Create.cshtml" />
+    <Content Include="Views\Paises\Delete.cshtml" />
+    <Content Include="Views\Paises\Details.cshtml" />
+    <Content Include="Views\Paises\Edit.cshtml" />
+    <Content Include="Views\Paises\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Imagenes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

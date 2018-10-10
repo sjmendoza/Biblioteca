@@ -1,0 +1,26 @@
+﻿@model Biblioteca.Models.Pais
+
+@{
+    ViewBag.Title = "Detalle País";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>País</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PaisId }, new { @class = "btn btn-info" }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>

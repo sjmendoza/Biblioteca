@@ -12,7 +12,7 @@ namespace Biblioteca.Models
         public int EditorialId { get; set; }
 
         [Display(Name="Editorial")]
-        public string editorial { get; set; }
+        public string nombre { get; set; }
 
         public virtual ICollection<Libro> Libros { get; set; }
     }

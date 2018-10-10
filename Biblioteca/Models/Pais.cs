@@ -12,7 +12,7 @@ namespace Biblioteca.Models
         public int PaisId { get; set; }
 
         [Display(Name="Pais")]
-        public string pais { get; set; }
+        public string nombre { get; set; }
 
         public virtual ICollection<Autor> Autores { get; set; }
     }

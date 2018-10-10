@@ -12,7 +12,7 @@ namespace Biblioteca.Models
         public int IdiomaId { get; set; }
 
         [Display(Name = "Idioma")]
-        public string idioma { get; set; }
+        public string nombre { get; set; }
 
         public virtual ICollection<Libro> Libros { get; set; }
 

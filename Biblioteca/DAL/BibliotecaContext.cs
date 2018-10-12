@@ -21,6 +21,8 @@ namespace Biblioteca.DAL
         public DbSet<Lector> Lectores { get; set; }
         public DbSet<Libro> Libros { get; set; }
         public DbSet<Alquiler> Alquileres{ get; set; }
+        public DbSet<Estado>Estados { get; set; }
+        public DbSet<Ejemplar> Ejemplares { get; set; }
 
 
     }

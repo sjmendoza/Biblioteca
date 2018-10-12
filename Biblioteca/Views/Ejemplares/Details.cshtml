@@ -1,0 +1,42 @@
+﻿@model Biblioteca.Models.Ejemplar
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ejemplar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Libro.titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Libro.titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroEjemplar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroEjemplar)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EjemplarId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -45,7 +45,7 @@ namespace Biblioteca.Models
         public virtual Editorial Editorial { get; set; }
         public virtual Idioma Idioma { get; set; }
 
-        public virtual ICollection<Alquiler> Alquileres { get; set; }
+        public virtual ICollection<Ejemplar> Ejemplares { get; set; }
 
     }
 }

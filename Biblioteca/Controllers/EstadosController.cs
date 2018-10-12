@@ -11,116 +11,107 @@ using Biblioteca.Models;
 
 namespace Biblioteca.Controllers
 {
-    public class AlquileresController : Controller
+    public class EstadosController : Controller
     {
         private BibliotecaContext db = new BibliotecaContext();
 
-        // GET: Alquileres
+        // GET: Estados
         public ActionResult Index()
         {
-            var alquileres = db.Alquileres.Include(a => a.Ejemplar).Include(a => a.Lector);
-            return View(alquileres.ToList());
+            return View(db.Estados.ToList());
         }
 
-        // GET: Alquileres/Details/5
+        // GET: Estados/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Alquiler alquiler = db.Alquileres.Find(id);
-            if (alquiler == null)
+            Estado estado = db.Estados.Find(id);
+            if (estado == null)
             {
                 return HttpNotFound();
             }
-            return View(alquiler);
+            return View(estado);
         }
 
-        // GET: Alquileres/Create
+        // GET: Estados/Create
         public ActionResult Create()
         {
-            ViewBag.EjemplarId = new SelectList(db.Ejemplares, "EjemplarId", "EjemplarId");
-            ViewBag.LectorId = new SelectList(db.Lectores, "LectorId", "apellido");
             return View();
         }
 
-        // POST: Alquileres/Create
+        // POST: Estados/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AlquilerId,LectorId,EjemplarId,fechaSalida,fechaEntrada")] Alquiler alquiler)
+        public ActionResult Create([Bind(Include = "EstadoId,nombre")] Estado estado)
         {
             if (ModelState.IsValid)
             {
-                db.Alquileres.Add(alquiler);
+                db.Estados.Add(estado);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.EjemplarId = new SelectList(db.Ejemplares, "EjemplarId", "EjemplarId", alquiler.EjemplarId);
-            ViewBag.LectorId = new SelectList(db.Lectores, "LectorId", "apellido", alquiler.LectorId);
-            return View(alquiler);
+            return View(estado);
         }
 
-        // GET: Alquileres/Edit/5
+        // GET: Estados/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Alquiler alquiler = db.Alquileres.Find(id);
-            if (alquiler == null)
+            Estado estado = db.Estados.Find(id);
+            if (estado == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.EjemplarId = new SelectList(db.Ejemplares, "EjemplarId", "EjemplarId", alquiler.EjemplarId);
-            ViewBag.LectorId = new SelectList(db.Lectores, "LectorId", "apellido", alquiler.LectorId);
-            return View(alquiler);
+            return View(estado);
         }
 
-        // POST: Alquileres/Edit/5
+        // POST: Estados/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AlquilerId,LectorId,EjemplarId,fechaSalida,fechaEntrada")] Alquiler alquiler)
+        public ActionResult Edit([Bind(Include = "EstadoId,nombre")] Estado estado)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(alquiler).State = EntityState.Modified;
+                db.Entry(estado).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.EjemplarId = new SelectList(db.Ejemplares, "EjemplarId", "EjemplarId", alquiler.EjemplarId);
-            ViewBag.LectorId = new SelectList(db.Lectores, "LectorId", "apellido", alquiler.LectorId);
-            return View(alquiler);
+            return View(estado);
         }
 
-        // GET: Alquileres/Delete/5
+        // GET: Estados/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Alquiler alquiler = db.Alquileres.Find(id);
-            if (alquiler == null)
+            Estado estado = db.Estados.Find(id);
+            if (estado == null)
             {
                 return HttpNotFound();
             }
-            return View(alquiler);
+            return View(estado);
         }
 
-        // POST: Alquileres/Delete/5
+        // POST: Estados/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Alquiler alquiler = db.Alquileres.Find(id);
-            db.Alquileres.Remove(alquiler);
+            Estado estado = db.Estados.Find(id);
+            db.Estados.Remove(estado);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

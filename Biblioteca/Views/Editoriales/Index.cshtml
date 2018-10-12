@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Biblioteca.Models.Editorial>
 
 @{
-    ViewBag.Title = "Editoriales";
+    ViewBag.Title = "Index";
 }
 
-<h2>Listado de Editoriales</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Agregar nuevo", "Create",null, new { @class = "btn btn-success" })
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.nombre)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.EditorialId }, new { @class = "btn btn-primary" }) |
-            @Html.ActionLink("Detalle", "Details", new { id=item.EditorialId }, new { @class = "btn btn-info" }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.EditorialId }, new { @class = "btn btn-warning" })
+            @Html.ActionLink("Edit", "Edit", new { id=item.EditorialId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EditorialId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EditorialId })
         </td>
     </tr>
 }

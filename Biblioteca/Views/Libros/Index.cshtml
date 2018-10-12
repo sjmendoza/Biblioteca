@@ -1,16 +1,19 @@
 ﻿@model IEnumerable<Biblioteca.Models.Libro>
 
 @{
-    ViewBag.Title = "Libros";
+    ViewBag.Title = "Index";
 }
 
-<h2>Listado de Libros</h2>
+<h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Agregar nuevo Libro", "Create",null, new { @class = "btn btn-success" })
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.titulo)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Autor.nombre)
         </th>
@@ -24,22 +27,16 @@
             @Html.DisplayNameFor(model => model.Idioma.nombre)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.titulo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.fechaLanza)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.paginas)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.descripcion)
+            Cantidad Libros
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.titulo)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Autor.nombre)
         </td>
@@ -52,22 +49,13 @@
         <td>
             @Html.DisplayFor(modelItem => item.Idioma.nombre)
         </td>
+        <th>
+            @Html.Display("Cantidad Libros")
+        </th>
         <td>
-            @Html.DisplayFor(modelItem => item.titulo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fechaLanza)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.paginas)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.descripcion)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.LibroId }, new { @class = "btn btn-primary" } )|
-            @Html.ActionLink("Details", "Details", new { id=item.LibroId }, new { @class = "btn btn-info" }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.LibroId }, new { @class = "btn btn-warning" })
+            @Html.ActionLink("Ejemplar", "Cantidad", new { id = item.LibroId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.LibroId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.LibroId })
         </td>
     </tr>
 }

@@ -141,5 +141,18 @@ namespace Biblioteca.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        //Numero de ejemplares
+        public ActionResult Cantidad(int? id)
+        {
+           Libro l = db.Libros.Find(id);
+
+            var cantidad = ( from p in db.Libros where p.LibroId==id select new CantidadViewModel
+            { id = p.LibroId, autor=p.Autor.nombre,titulo= p.titulo,categoria= p.Categoria.nombre,
+             cantidad=p.Ejemplares.Count }).ToList();
+            ViewBag.cantidad = cantidad;
+            return View(cantidad);
+        }
     }
 }

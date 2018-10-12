@@ -199,6 +199,8 @@
     <Compile Include="Controllers\AutoresController.cs" />
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\EditorialesController.cs" />
+    <Compile Include="Controllers\EjemplaresController.cs" />
+    <Compile Include="Controllers\EstadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IdiomasController.cs" />
     <Compile Include="Controllers\LectoresController.cs" />
@@ -210,11 +212,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810112151159_InitialCreate.cs" />
+    <Compile Include="Migrations\201810112151159_InitialCreate.Designer.cs">
+      <DependentUpon>201810112151159_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Alquiler.cs" />
     <Compile Include="Models\Autor.cs" />
+    <Compile Include="Models\CantidadViewModel.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\Editorial.cs" />
+    <Compile Include="Models\Ejemplar.cs" />
+    <Compile Include="Models\Estado.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Idioma.cs" />
     <Compile Include="Models\Lector.cs" />
@@ -303,6 +313,16 @@
     <Content Include="Views\Editoriales\Details.cshtml" />
     <Content Include="Views\Editoriales\Edit.cshtml" />
     <Content Include="Views\Editoriales\Index.cshtml" />
+    <Content Include="Views\Ejemplares\Create.cshtml" />
+    <Content Include="Views\Ejemplares\Delete.cshtml" />
+    <Content Include="Views\Ejemplares\Details.cshtml" />
+    <Content Include="Views\Ejemplares\Edit.cshtml" />
+    <Content Include="Views\Ejemplares\Index.cshtml" />
+    <Content Include="Views\Estados\Create.cshtml" />
+    <Content Include="Views\Estados\Delete.cshtml" />
+    <Content Include="Views\Estados\Details.cshtml" />
+    <Content Include="Views\Estados\Edit.cshtml" />
+    <Content Include="Views\Estados\Index.cshtml" />
     <Content Include="Views\Idiomas\Create.cshtml" />
     <Content Include="Views\Idiomas\Delete.cshtml" />
     <Content Include="Views\Idiomas\Details.cshtml" />
@@ -323,6 +343,7 @@
     <Content Include="Views\Paises\Details.cshtml" />
     <Content Include="Views\Paises\Edit.cshtml" />
     <Content Include="Views\Paises\Index.cshtml" />
+    <Content Include="Views\Libros\Cantidad.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -340,6 +361,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810112151159_InitialCreate.resx">
+      <DependentUpon>201810112151159_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

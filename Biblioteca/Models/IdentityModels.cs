@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
+
 namespace Biblioteca.Models
 {
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
@@ -21,8 +22,8 @@ namespace Biblioteca.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-           // : base("DefaultConnection", throwIfV1Schema: false)
-           : base(" Biblioteca", throwIfV1Schema: false)
+           : base("DefaultConnection", throwIfV1Schema: false)
+           //: base(" Biblioteca", throwIfV1Schema: false)
         
         {
         }
@@ -31,5 +32,6 @@ namespace Biblioteca.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }

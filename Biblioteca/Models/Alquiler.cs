@@ -14,17 +14,20 @@ namespace Biblioteca.Models
         [Display(Name = "Lector")]
         public int LectorId { get; set; }
         
-        [Display(Name ="Libro")]
-        public int LibroId { get; set; }
+        [Display(Name ="Ejemplar")]
+        public int EjemplarId { get; set; }
 
+        [Display(Name = "Fecha Salida")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime fechaSalida { get; set; }
 
-        [Display(Name = "Fecha")]
+        [Display(Name = "Fecha Entrada")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime fechaEntrada { get; set; }
 
         public virtual Lector Lector { get; set; }
-        public virtual Libro Libro { get; set; }
+        public virtual Ejemplar Ejemplar { get; set; }
     }
 }
